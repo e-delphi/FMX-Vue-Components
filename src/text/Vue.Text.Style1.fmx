@@ -1,0 +1,118 @@
+inherited VueTextStyle1: TVueTextStyle1
+  Align = Client
+  object lytClient: TLayout
+    Align = Client
+    Size.Width = 350.000000000000000000
+    Size.Height = 50.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    object rtgClient: TRectangle
+      Align = Client
+      Fill.Color = claNull
+      Margins.Top = 8.000000000000000000
+      Size.Width = 350.000000000000000000
+      Size.Height = 42.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Color = xFF7F7F7F
+      Stroke.Thickness = 0.500000000000000000
+      XRadius = 3.000000000000000000
+      YRadius = 3.000000000000000000
+      OnMouseEnter = rtgClientMouseEnter
+      OnMouseLeave = rtgClientMouseLeave
+      object rtgStrokeColorAni: TColorAnimation
+        AnimationType = InOut
+        Duration = 0.200000002980232200
+        Interpolation = Cubic
+        PropertyName = 'Stroke.Color'
+        StartValue = xFF7F7F7F
+        StopValue = xFF226ABF
+      end
+    end
+    object edtText: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Align = Client
+      StyleLookup = 'transparentedit'
+      TabOrder = 0
+      TextSettings.Font.Family = 'Roboto'
+      TextSettings.Font.Size = 16.000000000000000000
+      Margins.Left = 8.000000000000000000
+      Margins.Top = 15.000000000000000000
+      Margins.Right = 8.000000000000000000
+      Margins.Bottom = 4.000000000000000000
+      Size.Width = 334.000000000000000000
+      Size.Height = 31.000000000000000000
+      Size.PlatformDefault = False
+      StyledSettings = [Style, FontColor]
+      OnEnter = edtTextEnter
+      OnExit = edtTextExit
+      OnMouseEnter = rtgClientMouseEnter
+      OnMouseLeave = rtgClientMouseLeave
+    end
+    object lneEffect: TLine
+      LineType = Top
+      Position.X = 6.000000000000000000
+      Position.Y = 9.000000000000000000
+      Size.Width = 1.000000000000000000
+      Size.Height = 3.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Color = xFFFAFAFA
+      Stroke.Thickness = 5.000000000000000000
+      object lneWidthAni: TFloatAnimation
+        AnimationType = InOut
+        Duration = 0.200000002980232200
+        Interpolation = Cubic
+        PropertyName = 'Width'
+        StartValue = 0.000000000000000000
+        StopValue = 93.000000000000000000
+      end
+    end
+    object lbCaption: TLabel
+      AutoSize = True
+      StyledSettings = [Style]
+      Position.X = 11.000000000000000000
+      Position.Y = 21.000000000000000000
+      Scale.X = 1.299999952316284000
+      Scale.Y = 1.299999952316284000
+      Size.Width = 42.000000000000000000
+      Size.Height = 15.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Family = 'Roboto'
+      TextSettings.FontColor = xFF7F7F7F
+      TextSettings.WordWrap = False
+      Text = 'Caption'
+      TabOrder = 1
+      object lbPosYAni: TFloatAnimation
+        AnimationType = InOut
+        Duration = 0.200000002980232200
+        Interpolation = Cubic
+        PropertyName = 'Position.Y'
+        StartValue = 21.000000000000000000
+        StopValue = 0.000000000000000000
+      end
+      object lbScaleYAni: TFloatAnimation
+        AnimationType = InOut
+        Duration = 0.200000002980232200
+        Interpolation = Cubic
+        PropertyName = 'Scale.Y'
+        StartValue = 1.299999952316284000
+        StopValue = 1.000000000000000000
+      end
+      object lbScaleXAni: TFloatAnimation
+        AnimationType = InOut
+        Duration = 0.200000002980232200
+        Interpolation = Cubic
+        PropertyName = 'Scale.X'
+        StartValue = 1.299999952316284000
+        StopValue = 1.000000000000000000
+      end
+      object lbColorAni: TColorAnimation
+        AnimationType = InOut
+        Duration = 0.200000002980232200
+        Interpolation = Cubic
+        PropertyName = 'TextSettings.FontColor'
+        StartValue = xFF7F7F7F
+        StopValue = xFF226ABF
+      end
+    end
+  end
+end

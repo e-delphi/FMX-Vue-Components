@@ -1,0 +1,5 @@
+object VueTextBase: TVueTextBase
+  Size.Width = 350.000000000000000000
+  Size.Height = 50.000000000000000000
+  Size.PlatformDefault = False
+end

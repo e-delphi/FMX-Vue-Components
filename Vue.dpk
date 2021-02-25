@@ -1,0 +1,45 @@
+﻿package Vue;
+
+{$R *.res}
+{$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO OFF}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION OFF}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES ON}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DEFINE DEBUG}
+{$ENDIF IMPLICITBUILDING}
+{$DESCRIPTION 'Vue Design Components for Firemonkey'}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  fmx;
+
+contains
+  Vue.Install in 'src\Vue.Install.pas',
+  Vue.Utils in 'src\Vue.Utils.pas',
+  Vue.Text in 'src\text\Vue.Text.pas',
+  Vue.Text.Base in 'src\text\Vue.Text.Base.pas' {VueTextBase: TFrame},
+  Vue.Text.Style0 in 'src\text\Vue.Text.Style0.pas' {VueTextStyle0: TFrame},
+  Vue.Text.Style1 in 'src\text\Vue.Text.Style1.pas' {VueTextStyle1: TFrame},
+  Vue.Text.Style2 in 'src\text\Vue.Text.Style2.pas' {VueTextStyle2: TFrame},
+  Vue.Text.Style3 in 'src\text\Vue.Text.Style3.pas' {VueTextStyle3: TFrame};
+
+end.

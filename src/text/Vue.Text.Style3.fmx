@@ -1,0 +1,74 @@
+inherited VueTextStyle3: TVueTextStyle3
+  Align = Client
+  object lytClient: TLayout
+    Align = Client
+    Size.Width = 350.000000000000000000
+    Size.Height = 50.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    object rtgClient: TRectangle
+      Align = Client
+      Fill.Color = claNull
+      Margins.Top = 8.000000000000000000
+      Size.Width = 350.000000000000000000
+      Size.Height = 42.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Color = xFF7F7F7F
+      Stroke.Thickness = 0.500000000000000000
+      XRadius = 3.000000000000000000
+      YRadius = 3.000000000000000000
+      object rtgClientClient: TRectangle
+        Align = Client
+        Fill.Color = claWhite
+        Size.Width = 350.000000000000000000
+        Size.Height = 42.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Color = claNull
+        Stroke.Thickness = 0.500000000000000000
+        XRadius = 3.000000000000000000
+        YRadius = 3.000000000000000000
+      end
+      object rtgShadow: TShadowEffect
+        Distance = 1.500000000000000000
+        Direction = 90.000000000000000000
+        Softness = 0.100000001490116100
+        Opacity = 0.500000000000000000
+        ShadowColor = claBlack
+      end
+    end
+    object lbCaption: TLabel
+      AutoSize = True
+      StyledSettings = [Style]
+      Position.X = 11.000000000000000000
+      Position.Y = 21.000000000000000000
+      Scale.X = 1.299999952316284000
+      Scale.Y = 1.299999952316284000
+      Size.Width = 42.000000000000000000
+      Size.Height = 15.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Family = 'Roboto'
+      TextSettings.FontColor = xFF7F7F7F
+      TextSettings.WordWrap = False
+      Text = 'Caption'
+      TabOrder = 0
+    end
+    object edtText: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Align = Client
+      StyleLookup = 'transparentedit'
+      TabOrder = 1
+      TextSettings.Font.Family = 'Roboto'
+      TextSettings.Font.Size = 16.000000000000000000
+      Margins.Left = 8.000000000000000000
+      Margins.Top = 15.000000000000000000
+      Margins.Right = 8.000000000000000000
+      Margins.Bottom = 4.000000000000000000
+      Size.Width = 334.000000000000000000
+      Size.Height = 31.000000000000000000
+      Size.PlatformDefault = False
+      StyledSettings = [Style, FontColor]
+      OnEnter = edtTextEnter
+      OnExit = edtTextExit
+    end
+  end
+end

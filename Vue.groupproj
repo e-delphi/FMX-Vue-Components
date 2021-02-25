@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{2151A67D-3690-4CC9-A035-E88F7F6CEA6B}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="Vue.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="demo\Exemple.dproj">
+            <Dependencies>Vue.dproj</Dependencies>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="Vue">
+        <MSBuild Projects="Vue.dproj"/>
+    </Target>
+    <Target Name="Vue:Clean">
+        <MSBuild Projects="Vue.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Vue:Make">
+        <MSBuild Projects="Vue.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Exemple" DependsOnTargets="Vue">
+        <MSBuild Projects="demo\Exemple.dproj"/>
+    </Target>
+    <Target Name="Exemple:Clean" DependsOnTargets="Vue:Clean">
+        <MSBuild Projects="demo\Exemple.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Exemple:Make" DependsOnTargets="Vue:Make">
+        <MSBuild Projects="demo\Exemple.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="Vue;Exemple"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="Vue:Clean;Exemple:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="Vue:Make;Exemple:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
