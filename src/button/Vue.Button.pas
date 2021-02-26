@@ -1,27 +1,25 @@
 ﻿// Eduardo - 25/02/2021
-unit Vue.Text;
+unit Vue.Button;
 
 interface
 
 uses
   FMX.Controls,
   System.Classes,
-  Vue.Text.Base,
+  Vue.Button.Base,
   // Styles
-  Vue.Text.Style0,
-  Vue.Text.Style1,
-  Vue.Text.Style2,
-  Vue.Text.Style3;
+  Vue.Button.Style0;
 
 type
-  [ComponentPlatformsAttribute(pidAllPlatforms)]
-  TVueText = class(TControl)
+  TVueButton = class(TControl)
   private
-    FFrame: TVueTextBase;
+    FFrame: TVueButtonBase;
     FStyle: Integer;
     function GetCaption: String;
     procedure SetCaption(const Value: String);
     procedure SetStyle(const Value: Integer);
+    procedure SetOnClick(const Value: TNotifyEvent);
+    function GetOnClick: TNotifyEvent;
   public
     constructor Create(AOwner: TComponent); override;
     destructor Destroy; override;
@@ -33,46 +31,57 @@ type
     property Size;
     property Caption: String read GetCaption write SetCaption;
     property Style: Integer read FStyle write SetStyle;
+    property OnClick: TNotifyEvent read GetOnClick write SetOnClick;
   end;
 
 implementation
 
-{ TVueText }
+{ TVueButton }
 
-constructor TVueText.Create(AOwner: TComponent);
+constructor TVueButton.Create(AOwner: TComponent);
 begin
   inherited Create(AOwner);
   Style  := 0;
-  Width  := 350;
-  Height := 50;
+  Width  := 100;
+  Height := 42;
 end;
 
-destructor TVueText.Destroy;
+destructor TVueButton.Destroy;
 begin
   FFrame.Free;
   inherited;
 end;
 
-function TVueText.GetCaption: String;
+function TVueButton.GetCaption: String;
 begin
   Result := FFrame.Caption
 end;
 
-procedure TVueText.SetCaption(const Value: String);
+procedure TVueButton.SetCaption(const Value: String);
 begin
   FFrame.Caption := Value;
 end;
 
-procedure TVueText.SetStyle(const Value: Integer);
+procedure TVueButton.SetStyle(const Value: Integer);
 begin
   FStyle := Value;
 
   if Assigned(FFrame) then
     FFrame.Free;
 
-  FFrame := TVueTextBase(TVueTextBase.VueTextStyle(Value).Create).Create(Self);
+  FFrame := TVueButtonBase(TVueButtonBase.VueButtonStyle(Value).Create).Create(Self);
   FFrame.Stored := False;
   Self.AddObject(FFrame);
+end;
+
+function TVueButton.GetOnClick: TNotifyEvent;
+begin
+  Result := FFrame.OnClick;
+end;
+
+procedure TVueButton.SetOnClick(const Value: TNotifyEvent);
+begin
+  FFrame.OnClick := Value;
 end;
 
 end.

@@ -1,0 +1,93 @@
+inherited VueButtonStyle0: TVueButtonStyle0
+  Align = Client
+  Size.Height = 42.000000000000000000
+  object lytClient: TLayout
+    Align = Client
+    Size.Width = 100.000000000000000000
+    Size.Height = 42.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    object rtgClient: TRectangle
+      Align = Client
+      ClipChildren = True
+      Fill.Color = claNull
+      Size.Width = 100.000000000000000000
+      Size.Height = 42.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Color = xFFDFDFDF
+      Stroke.Thickness = 0.500000000000000000
+      XRadius = 3.000000000000000000
+      YRadius = 3.000000000000000000
+      object rtgClientClient: TRectangle
+        Align = Client
+        Fill.Color = claWhite
+        Size.Width = 100.000000000000000000
+        Size.Height = 42.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Color = claNull
+        Stroke.Thickness = 0.500000000000000000
+        XRadius = 3.000000000000000000
+        YRadius = 3.000000000000000000
+        OnMouseDown = rtgClientClientMouseDown
+      end
+      object rtgShadow: TShadowEffect
+        Distance = 1.500000000000000000
+        Direction = 90.000000000000000000
+        Softness = 0.100000001490116100
+        Opacity = 0.500000000000000000
+        ShadowColor = claBlack
+      end
+      object crlEffect: TCircle
+        Fill.Color = xFFC8C8C8
+        Position.X = 50.000000000000000000
+        Position.Y = 20.000000000000000000
+        Size.Width = 1.000000000000000000
+        Size.Height = 1.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Kind = None
+        OnMouseDown = rtgClientClientMouseDown
+        object crlOpacityAni: TFloatAnimation
+          AnimationType = InOut
+          Duration = 0.300000011920929000
+          Interpolation = Cubic
+          PropertyName = 'Opacity'
+          StartValue = 0.000000000000000000
+          StopValue = 1.000000000000000000
+        end
+        object crlEffectAni: TFloatAnimation
+          Duration = 0.300000011920929000
+          Interpolation = Cubic
+          OnProcess = crlEffectAniProcess
+          PropertyName = 'Size.Height'
+          StartValue = 0.000000000000000000
+          StopValue = 0.000000000000000000
+        end
+        object crlOpacityRAni: TFloatAnimation
+          AnimationType = InOut
+          Delay = 0.300000011920929000
+          Duration = 0.200000002980232200
+          Interpolation = Cubic
+          OnFinish = crlOpacityRAniFinish
+          PropertyName = 'Opacity'
+          StartValue = 1.000000000000000000
+          StopValue = 0.000000000000000000
+        end
+      end
+    end
+    object lbCaption: TLabel
+      Align = Client
+      StyledSettings = [Style]
+      Scale.X = 1.299999952316284000
+      Scale.Y = 1.299999952316284000
+      Size.Width = 76.923080444335940000
+      Size.Height = 32.307693481445310000
+      Size.PlatformDefault = False
+      TextSettings.Font.Family = 'Roboto'
+      TextSettings.FontColor = xFF7F7F7F
+      TextSettings.HorzAlign = Center
+      TextSettings.WordWrap = False
+      Text = 'Button'
+      TabOrder = 0
+    end
+  end
+end

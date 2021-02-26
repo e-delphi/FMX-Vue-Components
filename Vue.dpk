@@ -40,6 +40,9 @@ contains
   Vue.Text.Style0 in 'src\text\Vue.Text.Style0.pas' {VueTextStyle0: TFrame},
   Vue.Text.Style1 in 'src\text\Vue.Text.Style1.pas' {VueTextStyle1: TFrame},
   Vue.Text.Style2 in 'src\text\Vue.Text.Style2.pas' {VueTextStyle2: TFrame},
-  Vue.Text.Style3 in 'src\text\Vue.Text.Style3.pas' {VueTextStyle3: TFrame};
+  Vue.Text.Style3 in 'src\text\Vue.Text.Style3.pas' {VueTextStyle3: TFrame},
+  Vue.Button.Base in 'src\button\Vue.Button.Base.pas' {VueButtonBase: TFrame},
+  Vue.Button in 'src\button\Vue.Button.pas',
+  Vue.Button.Style0 in 'src\button\Vue.Button.Style0.pas' {VueButtonStyle0: TFrame};
 
 end.

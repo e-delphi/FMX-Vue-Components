@@ -1,0 +1,5 @@
+object VueButtonBase: TVueButtonBase
+  Size.Width = 100.000000000000000000
+  Size.Height = 50.000000000000000000
+  Size.PlatformDefault = False
+end

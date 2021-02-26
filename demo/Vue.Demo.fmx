@@ -9,39 +9,48 @@ object Demo: TDemo
   FormFactor.Devices = [Desktop]
   DesignerMasterStyle = 0
   object VueText1: TVueText
-    Position.X = 144.000000000000000000
+    Position.X = 32.000000000000000000
     Position.Y = 64.000000000000000000
     Size.Width = 350.000000000000000000
     Size.Height = 50.000000000000000000
     Size.PlatformDefault = False
-    Caption = 'Caption'
+    Caption = 'Text'
     Style = 0
   end
   object VueText4: TVueText
-    Position.X = 144.000000000000000000
+    Position.X = 32.000000000000000000
     Position.Y = 320.000000000000000000
     Size.Width = 350.000000000000000000
     Size.Height = 50.000000000000000000
     Size.PlatformDefault = False
-    Caption = 'Caption'
+    Caption = 'Text'
     Style = 3
   end
   object VueText3: TVueText
-    Position.X = 144.000000000000000000
+    Position.X = 32.000000000000000000
     Position.Y = 232.000000000000000000
     Size.Width = 350.000000000000000000
     Size.Height = 50.000000000000000000
     Size.PlatformDefault = False
-    Caption = 'Caption'
+    Caption = 'Text'
     Style = 2
   end
   object VueText2: TVueText
-    Position.X = 144.000000000000000000
+    Position.X = 32.000000000000000000
     Position.Y = 144.000000000000000000
     Size.Width = 350.000000000000000000
     Size.Height = 50.000000000000000000
     Size.PlatformDefault = False
-    Caption = 'Caption'
+    Caption = 'Text'
     Style = 1
+    object VueButton1: TVueButton
+      Position.X = 368.000000000000000000
+      Position.Y = 184.000000000000000000
+      Size.Width = 100.000000000000000000
+      Size.Height = 42.000000000000000000
+      Size.PlatformDefault = False
+      Caption = 'Button'
+      Style = 0
+    end
   end
 end

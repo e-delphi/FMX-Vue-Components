@@ -43,13 +43,13 @@ inherited VueTextStyle3: TVueTextStyle3
       Position.Y = 21.000000000000000000
       Scale.X = 1.299999952316284000
       Scale.Y = 1.299999952316284000
-      Size.Width = 42.000000000000000000
+      Size.Width = 23.000000000000000000
       Size.Height = 15.000000000000000000
       Size.PlatformDefault = False
       TextSettings.Font.Family = 'Roboto'
       TextSettings.FontColor = xFF7F7F7F
       TextSettings.WordWrap = False
-      Text = 'Caption'
+      Text = 'Text'
       TabOrder = 0
     end
     object edtText: TEdit

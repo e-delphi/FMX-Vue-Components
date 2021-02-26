@@ -14,7 +14,8 @@ uses
   FMX.Forms,
   FMX.Graphics,
   FMX.Dialogs,
-  Vue.Text;
+  Vue.Text,
+  Vue.Button;
 
 type
   TDemo = class(TForm)
@@ -22,6 +23,7 @@ type
     VueText2: TVueText;
     VueText3: TVueText;
     VueText4: TVueText;
+    VueButton1: TVueButton;
   private
     { Private declarations }
   public

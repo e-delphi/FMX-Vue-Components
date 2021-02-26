@@ -11,11 +11,12 @@ procedure Register;
 implementation
 
 uses
-  Vue.Text;
+  Vue.Text,
+  Vue.Button;
 
 procedure Register;
 begin
-  RegisterComponents('Vue', [TVueText]);
+  RegisterComponents('Vue', [TVueText, TVueButton]);
 end;
 
 end.
