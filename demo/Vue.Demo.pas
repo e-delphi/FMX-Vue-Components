@@ -24,6 +24,7 @@ type
     VueText3: TVueText;
     VueText4: TVueText;
     VueButton1: TVueButton;
+    VueButton2: TVueButton;
   private
     { Private declarations }
   public

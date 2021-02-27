@@ -1,4 +1,4 @@
-inherited VueButtonStyle0: TVueButtonStyle0
+inherited VueButtonStyle2: TVueButtonStyle2
   Align = Client
   Size.Height = 42.000000000000000000
   object lytClient: TLayout
@@ -11,36 +11,16 @@ inherited VueButtonStyle0: TVueButtonStyle0
       Align = Client
       ClipChildren = True
       Fill.Color = claNull
+      Opacity = 0.500000000000000000
       Size.Width = 100.000000000000000000
       Size.Height = 42.000000000000000000
       Size.PlatformDefault = False
-      Stroke.Color = xFFDFDFDF
-      Stroke.Thickness = 0.500000000000000000
+      Stroke.Color = xFF7F7F7F
       XRadius = 3.000000000000000000
       YRadius = 3.000000000000000000
-      OnMouseEnter = rtgClientClientMouseEnter
-      OnMouseLeave = rtgClientClientMouseLeave
-      object rtgClientClient: TRectangle
-        Align = Client
-        Fill.Color = claWhite
-        Size.Width = 100.000000000000000000
-        Size.Height = 42.000000000000000000
-        Size.PlatformDefault = False
-        Stroke.Color = claNull
-        Stroke.Thickness = 0.500000000000000000
-        XRadius = 3.000000000000000000
-        YRadius = 3.000000000000000000
-        OnMouseDown = rtgClientClientMouseDown
-        OnMouseEnter = rtgClientClientMouseEnter
-        OnMouseLeave = rtgClientClientMouseLeave
-      end
-      object rtgShadow: TShadowEffect
-        Distance = 1.500000000000000000
-        Direction = 90.000000000000000000
-        Softness = 0.100000001490116100
-        Opacity = 0.500000000000000000
-        ShadowColor = claBlack
-      end
+      OnMouseDown = rtgClientMouseDown
+      OnMouseEnter = rtgClientMouseEnter
+      OnMouseLeave = rtgClientMouseLeave
       object crlEffect: TCircle
         Fill.Color = xFFC8C8C8
         Position.X = 50.000000000000000000
@@ -49,7 +29,7 @@ inherited VueButtonStyle0: TVueButtonStyle0
         Size.Height = 1.000000000000000000
         Size.PlatformDefault = False
         Stroke.Kind = None
-        OnMouseDown = rtgClientClientMouseDown
+        OnMouseDown = rtgClientMouseDown
         object crlOpacityAni: TFloatAnimation
           AnimationType = InOut
           Duration = 0.300000011920929000

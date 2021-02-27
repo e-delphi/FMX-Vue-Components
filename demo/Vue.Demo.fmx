@@ -43,14 +43,23 @@ object Demo: TDemo
     Size.PlatformDefault = False
     Caption = 'Text'
     Style = 1
-    object VueButton1: TVueButton
-      Position.X = 368.000000000000000000
-      Position.Y = 184.000000000000000000
-      Size.Width = 100.000000000000000000
-      Size.Height = 42.000000000000000000
-      Size.PlatformDefault = False
-      Caption = 'Button'
-      Style = 0
-    end
+  end
+  object VueButton1: TVueButton
+    Position.X = 408.000000000000000000
+    Position.Y = 152.000000000000000000
+    Size.Width = 89.000000000000000000
+    Size.Height = 42.000000000000000000
+    Size.PlatformDefault = False
+    Caption = 'Button'
+    Style = 2
+  end
+  object VueButton2: TVueButton
+    Position.X = 408.000000000000000000
+    Position.Y = 327.000000000000000000
+    Size.Width = 89.000000000000000000
+    Size.Height = 42.000000000000000000
+    Size.PlatformDefault = False
+    Caption = 'Button'
+    Style = 0
   end
 end

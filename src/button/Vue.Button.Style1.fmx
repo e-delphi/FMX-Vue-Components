@@ -1,38 +1,31 @@
-inherited VueButtonStyle0: TVueButtonStyle0
+inherited VueButtonStyle1: TVueButtonStyle1
   Align = Client
+  Size.Width = 53.000000000000000000
   Size.Height = 42.000000000000000000
   object lytClient: TLayout
     Align = Client
-    Size.Width = 100.000000000000000000
+    Size.Width = 53.000000000000000000
     Size.Height = 42.000000000000000000
     Size.PlatformDefault = False
     TabOrder = 2
-    object rtgClient: TRectangle
+    object rtgClient: TCircle
       Align = Client
       ClipChildren = True
       Fill.Color = claNull
-      Size.Width = 100.000000000000000000
+      Size.Width = 53.000000000000000000
       Size.Height = 42.000000000000000000
       Size.PlatformDefault = False
       Stroke.Color = xFFDFDFDF
       Stroke.Thickness = 0.500000000000000000
-      XRadius = 3.000000000000000000
-      YRadius = 3.000000000000000000
-      OnMouseEnter = rtgClientClientMouseEnter
-      OnMouseLeave = rtgClientClientMouseLeave
-      object rtgClientClient: TRectangle
+      object rtgClientClient: TCircle
         Align = Client
         Fill.Color = claWhite
-        Size.Width = 100.000000000000000000
+        Size.Width = 53.000000000000000000
         Size.Height = 42.000000000000000000
         Size.PlatformDefault = False
         Stroke.Color = claNull
         Stroke.Thickness = 0.500000000000000000
-        XRadius = 3.000000000000000000
-        YRadius = 3.000000000000000000
         OnMouseDown = rtgClientClientMouseDown
-        OnMouseEnter = rtgClientClientMouseEnter
-        OnMouseLeave = rtgClientClientMouseLeave
       end
       object rtgShadow: TShadowEffect
         Distance = 1.500000000000000000
@@ -43,8 +36,6 @@ inherited VueButtonStyle0: TVueButtonStyle0
       end
       object crlEffect: TCircle
         Fill.Color = xFFC8C8C8
-        Position.X = 50.000000000000000000
-        Position.Y = 20.000000000000000000
         Size.Width = 1.000000000000000000
         Size.Height = 1.000000000000000000
         Size.PlatformDefault = False
@@ -77,21 +68,6 @@ inherited VueButtonStyle0: TVueButtonStyle0
           StopValue = 0.000000000000000000
         end
       end
-    end
-    object lbCaption: TLabel
-      Align = Client
-      StyledSettings = [Style]
-      Scale.X = 1.299999952316284000
-      Scale.Y = 1.299999952316284000
-      Size.Width = 76.923080444335940000
-      Size.Height = 32.307693481445310000
-      Size.PlatformDefault = False
-      TextSettings.Font.Family = 'Roboto'
-      TextSettings.FontColor = xFF7F7F7F
-      TextSettings.HorzAlign = Center
-      TextSettings.WordWrap = False
-      Text = 'Button'
-      TabOrder = 0
     end
   end
 end

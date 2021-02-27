@@ -8,7 +8,9 @@ uses
   System.Classes,
   Vue.Button.Base,
   // Styles
-  Vue.Button.Style0;
+  Vue.Button.Style0,
+  Vue.Button.Style1,
+  Vue.Button.Style2;
 
 type
   TVueButton = class(TControl)

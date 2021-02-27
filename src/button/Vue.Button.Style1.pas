@@ -1,5 +1,5 @@
-﻿// Eduardo - 25/02/2021
-unit Vue.Button.Style0;
+﻿// Eduardo - 26/02/2021
+unit Vue.Button.Style1;
 
 interface
 
@@ -18,16 +18,17 @@ uses
   FMX.Edit,
   FMX.Layouts,
   Vue.Button.Base,
-  FMX.Effects;
+  FMX.Effects,
+  FMX.Graphics,
+  System.Types;
 
 type
   [ComponentPlatformsAttribute(pidAllPlatforms)]
-  TVueButtonStyle0 = class(TVueButtonBase)
+  TVueButtonStyle1 = class(TVueButtonBase)
     lytClient: TLayout;
-    rtgClient: TRectangle;
-    rtgClientClient: TRectangle;
+    rtgClient: TCircle;
+    rtgClientClient: TCircle;
     rtgShadow: TShadowEffect;
-    lbCaption: TLabel;
     crlEffect: TCircle;
     crlOpacityAni: TFloatAnimation;
     crlEffectAni: TFloatAnimation;
@@ -35,8 +36,6 @@ type
     procedure rtgClientClientMouseDown(Sender: TObject;  Button: TMouseButton; Shift: TShiftState; X, Y: Single);
     procedure crlEffectAniProcess(Sender: TObject);
     procedure crlOpacityRAniFinish(Sender: TObject);
-    procedure rtgClientClientMouseEnter(Sender: TObject);
-    procedure rtgClientClientMouseLeave(Sender: TObject);
   private
     FOnClick: TNotifyEvent;
     FX: Single;
@@ -55,39 +54,39 @@ uses
 
 {$R *.fmx}
 
-function TVueButtonStyle0.GetCaption: String;
+function TVueButtonStyle1.GetCaption: String;
 begin
-  Result := lbCaption.Text;
+//  Result := lbCaption.Text;
 end;
 
-procedure TVueButtonStyle0.SetCaption(const Value: String);
+procedure TVueButtonStyle1.SetCaption(const Value: String);
 begin
-  lbCaption.Text := Value;
+//  lbCaption.Text := Value;
 end;
 
-function TVueButtonStyle0.GetOnClick: TNotifyEvent;
+function TVueButtonStyle1.GetOnClick: TNotifyEvent;
 begin
   Result := FOnClick;
 end;
 
-procedure TVueButtonStyle0.SetOnClick(const Value: TNotifyEvent);
+procedure TVueButtonStyle1.SetOnClick(const Value: TNotifyEvent);
 begin
   FOnClick := Value;
 end;
 
-procedure TVueButtonStyle0.crlOpacityRAniFinish(Sender: TObject);
+procedure TVueButtonStyle1.crlOpacityRAniFinish(Sender: TObject);
 begin
   crlEffect.Visible := False;
 end;
 
-procedure TVueButtonStyle0.crlEffectAniProcess(Sender: TObject);
+procedure TVueButtonStyle1.crlEffectAniProcess(Sender: TObject);
 begin
   crlEffect.Width := crlEffect.Height;
   crlEffect.Position.X := FX - (crlEffect.Width / 2);
   crlEffect.Position.Y := FY - (crlEffect.Height / 2);
 end;
 
-procedure TVueButtonStyle0.rtgClientClientMouseDown(Sender: TObject; Button: TMouseButton; Shift: TShiftState; X, Y: Single);
+procedure TVueButtonStyle1.rtgClientClientMouseDown(Sender: TObject; Button: TMouseButton; Shift: TShiftState; X, Y: Single);
 begin
   FX := X;
   FY := Y;
@@ -108,17 +107,7 @@ begin
     FOnClick(Sender);
 end;
 
-procedure TVueButtonStyle0.rtgClientClientMouseEnter(Sender: TObject);
-begin
-  rtgClientClient.Fill.Color := RGB(245, 245, 245);
-end;
-
-procedure TVueButtonStyle0.rtgClientClientMouseLeave(Sender: TObject);
-begin
-  rtgClientClient.Fill.Color := TAlphaColors.White;
-end;
-
 initialization
-  TVueButtonBase.RegisterVueButtonStyle(TVueButtonStyle0);
+  TVueButtonBase.RegisterVueButtonStyle(TVueButtonStyle1);
 
 end.
