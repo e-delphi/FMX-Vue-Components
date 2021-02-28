@@ -15,7 +15,7 @@ uses
   FMX.Graphics,
   FMX.Dialogs,
   Vue.Text,
-  Vue.Button;
+  Vue.Button, Vue.Tooltip;
 
 type
   TDemo = class(TForm)
@@ -25,6 +25,9 @@ type
     VueText4: TVueText;
     VueButton1: TVueButton;
     VueButton2: TVueButton;
+    VueTooltip1: TVueTooltip;
+    procedure VueButton1Click(Sender: TObject);
+    procedure VueButton2Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -37,5 +40,15 @@ var
 implementation
 
 {$R *.fmx}
+
+procedure TDemo.VueButton1Click(Sender: TObject);
+begin
+  VueTooltip1.Show;
+end;
+
+procedure TDemo.VueButton2Click(Sender: TObject);
+begin
+  VueTooltip1.Hide;
+end;
 
 end.

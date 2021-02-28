@@ -1,0 +1,5 @@
+object VueTooltipBase: TVueTooltipBase
+  Size.Width = 80.000000000000000000
+  Size.Height = 30.000000000000000000
+  Size.PlatformDefault = False
+end

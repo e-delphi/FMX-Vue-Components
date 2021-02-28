@@ -1,0 +1,78 @@
+inherited VueTooltipStyle0: TVueTooltipStyle0
+  Align = Client
+  object lytClient: TLayout
+    Align = Client
+    Size.Width = 80.000000000000000000
+    Size.Height = 30.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    object rtgClient: TRectangle
+      Align = Client
+      Fill.Color = claBlack
+      Opacity = 0.600000023841857900
+      Size.Width = 80.000000000000000000
+      Size.Height = 30.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Kind = None
+      Stroke.Thickness = 0.500000000000000000
+      XRadius = 3.000000000000000000
+      YRadius = 3.000000000000000000
+    end
+    object lbCaption: TLabel
+      Align = Client
+      StyledSettings = [Style]
+      Scale.X = 1.299999952316284000
+      Scale.Y = 1.299999952316284000
+      Size.Width = 61.538463592529300000
+      Size.Height = 23.076923370361330000
+      Size.PlatformDefault = False
+      TextSettings.Font.Family = 'Roboto'
+      TextSettings.Font.Size = 10.000000000000000000
+      TextSettings.FontColor = claWhite
+      TextSettings.HorzAlign = Center
+      TextSettings.WordWrap = False
+      Text = 'Tooltip'
+      TabOrder = 0
+    end
+    object lytScaleXAni: TFloatAnimation
+      AnimationType = InOut
+      Duration = 0.200000002980232200
+      Interpolation = Cubic
+      PropertyName = 'Scale.X'
+      StartValue = 0.000000000000000000
+      StopValue = 1.000000000000000000
+    end
+    object lytScaleYAni: TFloatAnimation
+      AnimationType = InOut
+      Duration = 0.200000002980232200
+      Interpolation = Cubic
+      PropertyName = 'Scale.Y'
+      StartValue = 0.000000000000000000
+      StopValue = 1.000000000000000000
+    end
+    object lytPositionXAni: TFloatAnimation
+      AnimationType = InOut
+      Duration = 0.200000002980232200
+      Interpolation = Cubic
+      PropertyName = 'Position.X'
+      StartValue = 0.000000000000000000
+      StopValue = 0.000000000000000000
+    end
+    object lytPositionYAni: TFloatAnimation
+      AnimationType = InOut
+      Duration = 0.200000002980232200
+      Interpolation = Cubic
+      PropertyName = 'Position.Y'
+      StartValue = 0.000000000000000000
+      StopValue = 0.000000000000000000
+    end
+    object lytOpacityAni: TFloatAnimation
+      AnimationType = InOut
+      Duration = 0.500000000000000000
+      Interpolation = Cubic
+      PropertyName = 'Opacity'
+      StartValue = 1.000000000000000000
+      StopValue = 0.000000000000000000
+    end
+  end
+end

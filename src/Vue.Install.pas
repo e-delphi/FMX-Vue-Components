@@ -12,11 +12,12 @@ implementation
 
 uses
   Vue.Text,
-  Vue.Button;
+  Vue.Button,
+  Vue.Tooltip;
 
 procedure Register;
 begin
-  RegisterComponents('Vue', [TVueText, TVueButton]);
+  RegisterComponents('Vue', [TVueText, TVueButton, TVueTooltip]);
 end;
 
 end.

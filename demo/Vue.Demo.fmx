@@ -52,6 +52,7 @@ object Demo: TDemo
     Size.PlatformDefault = False
     Caption = 'Button'
     Style = 2
+    OnClick = VueButton1Click
   end
   object VueButton2: TVueButton
     Position.X = 408.000000000000000000
@@ -60,6 +61,16 @@ object Demo: TDemo
     Size.Height = 42.000000000000000000
     Size.PlatformDefault = False
     Caption = 'Button'
+    Style = 0
+    OnClick = VueButton2Click
+  end
+  object VueTooltip1: TVueTooltip
+    Position.X = 412.000000000000000000
+    Position.Y = 201.000000000000000000
+    Size.Width = 80.000000000000000000
+    Size.Height = 30.000000000000000000
+    Size.PlatformDefault = False
+    Caption = 'Tooltip'
     Style = 0
   end
 end
