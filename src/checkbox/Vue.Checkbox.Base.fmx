@@ -1,0 +1,5 @@
+object VueCheckboxBase: TVueCheckboxBase
+  Size.Width = 200.000000000000000000
+  Size.Height = 40.000000000000000000
+  Size.PlatformDefault = False
+end

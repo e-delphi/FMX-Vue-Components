@@ -1,0 +1,69 @@
+inherited VueCheckboxStyle0: TVueCheckboxStyle0
+  Align = Client
+  Size.Height = 42.000000000000000000
+  object lytClient: TLayout
+    Align = Client
+    Size.Width = 200.000000000000000000
+    Size.Height = 42.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    object lbCaption: TLabel
+      Align = Client
+      StyledSettings = [Style]
+      Scale.X = 1.299999952316284000
+      Scale.Y = 1.299999952316284000
+      Size.Width = 122.307693481445300000
+      Size.Height = 32.307693481445310000
+      Size.PlatformDefault = False
+      TextSettings.Font.Family = 'Roboto'
+      TextSettings.FontColor = xFF7F7F7F
+      TextSettings.WordWrap = False
+      Text = 'Checkbox'
+      TabOrder = 0
+      OnMouseDown = rtgClientClientMouseDown
+    end
+    object Layout1: TLayout
+      Align = Left
+      Size.Width = 41.000000000000000000
+      Size.Height = 42.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      object Rectangle1: TRectangle
+        Align = Center
+        Fill.Color = claNull
+        Size.Width = 18.000000000000000000
+        Size.Height = 18.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Color = xFF757575
+        Stroke.Thickness = 1.799999952316284000
+        XRadius = 2.000000000000000000
+        YRadius = 2.000000000000000000
+        OnMouseDown = rtgClientClientMouseDown
+        object Path1: TPath
+          Align = Client
+          Data.Path = {
+            1800000000000000C520F440560E694102000000C520F840560E6B4102000000
+            A470FD4062106C4102000000295C014162106C4102000000E7FB034162106C41
+            02000000BE9F06416E126B4102000000F0A70841560E6941010000007B148641
+            3E0ACB400200000094188841DCF9C2400200000094188841B7F3B54002000000
+            7B14864154E3AD400200000062108441F2D2A54002000000D9CE8041F2D2A540
+            0200000081957D4154E3AD4001000000295C0141EA265341010000002FDD8440
+            A245144102000000999979408941104102000000ED7C5F408941104102000000
+            8B6C4F40A245144102000000C64B3F40D34D184102000000C64B3F40FED41E41
+            020000008B6C4F4017D9224101000000C520F440560E694103000000C520F440
+            560E6941}
+          Fill.Color = claNull
+          Margins.Left = 3.000000000000000000
+          Margins.Top = 4.000000000000000000
+          Margins.Right = 3.000000000000000000
+          Margins.Bottom = 4.000000000000000000
+          Size.Width = 12.000000000000000000
+          Size.Height = 10.000000000000000000
+          Size.PlatformDefault = False
+          Stroke.Color = claNull
+          OnMouseDown = rtgClientClientMouseDown
+        end
+      end
+    end
+  end
+end

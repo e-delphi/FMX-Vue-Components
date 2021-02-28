@@ -13,11 +13,12 @@ implementation
 uses
   Vue.Text,
   Vue.Button,
-  Vue.Tooltip;
+  Vue.Tooltip,
+  Vue.Checkbox;
 
 procedure Register;
 begin
-  RegisterComponents('Vue', [TVueText, TVueButton, TVueTooltip]);
+  RegisterComponents('Vue', [TVueText, TVueButton, TVueTooltip, TVueCheckbox]);
 end;
 
 end.

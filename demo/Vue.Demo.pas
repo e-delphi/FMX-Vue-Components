@@ -15,7 +15,9 @@ uses
   FMX.Graphics,
   FMX.Dialogs,
   Vue.Text,
-  Vue.Button, Vue.Tooltip;
+  Vue.Button,
+  Vue.Tooltip,
+  Vue.Checkbox;
 
 type
   TDemo = class(TForm)
@@ -26,6 +28,7 @@ type
     VueButton1: TVueButton;
     VueButton2: TVueButton;
     VueTooltip1: TVueTooltip;
+    VueCheckbox1: TVueCheckbox;
     procedure VueButton1Click(Sender: TObject);
     procedure VueButton2Click(Sender: TObject);
   private
