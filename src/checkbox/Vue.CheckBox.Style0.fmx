@@ -8,27 +8,44 @@ inherited VueCheckboxStyle0: TVueCheckboxStyle0
     Size.PlatformDefault = False
     TabOrder = 2
     object lbCaption: TLabel
-      Align = Client
+      Align = VertCenter
       StyledSettings = [Style]
+      Position.X = 41.000000000000000000
+      Position.Y = 7.000000000000000000
       Scale.X = 1.299999952316284000
       Scale.Y = 1.299999952316284000
       Size.Width = 122.307693481445300000
-      Size.Height = 32.307693481445310000
+      Size.Height = 21.000000000000000000
       Size.PlatformDefault = False
       TextSettings.Font.Family = 'Roboto'
       TextSettings.FontColor = xFF7F7F7F
       TextSettings.WordWrap = False
       Text = 'Checkbox'
       TabOrder = 0
-      OnMouseDown = rtgClientClientMouseDown
+      OnMouseDown = CheckMouseDown
     end
-    object Layout1: TLayout
+    object lytCheck: TLayout
       Align = Left
       Size.Width = 41.000000000000000000
       Size.Height = 42.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 1
-      object Rectangle1: TRectangle
+      OnMouseDown = CheckMouseDown
+      OnMouseEnter = CheckMouseEnter
+      OnMouseLeave = CheckMouseLeave
+      object crlCheck: TCircle
+        Align = Center
+        Fill.Color = claBlack
+        Opacity = 0.200000002980232200
+        Size.Width = 40.000000000000000000
+        Size.Height = 40.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Kind = None
+        OnMouseDown = CheckMouseDown
+        OnMouseEnter = CheckMouseEnter
+        OnMouseLeave = CheckMouseLeave
+      end
+      object rtgCheck: TRectangle
         Align = Center
         Fill.Color = claNull
         Size.Width = 18.000000000000000000
@@ -38,8 +55,10 @@ inherited VueCheckboxStyle0: TVueCheckboxStyle0
         Stroke.Thickness = 1.799999952316284000
         XRadius = 2.000000000000000000
         YRadius = 2.000000000000000000
-        OnMouseDown = rtgClientClientMouseDown
-        object Path1: TPath
+        OnMouseDown = CheckMouseDown
+        OnMouseEnter = CheckMouseEnter
+        OnMouseLeave = CheckMouseLeave
+        object pthCheck: TPath
           Align = Client
           Data.Path = {
             1800000000000000C520F440560E694102000000C520F840560E6B4102000000
@@ -61,7 +80,9 @@ inherited VueCheckboxStyle0: TVueCheckboxStyle0
           Size.Height = 10.000000000000000000
           Size.PlatformDefault = False
           Stroke.Color = claNull
-          OnMouseDown = rtgClientClientMouseDown
+          OnMouseDown = CheckMouseDown
+          OnMouseEnter = CheckMouseEnter
+          OnMouseLeave = CheckMouseLeave
         end
       end
     end

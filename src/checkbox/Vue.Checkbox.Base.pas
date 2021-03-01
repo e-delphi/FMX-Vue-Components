@@ -12,6 +12,8 @@ type
   private
     class var VueCheckboxStyles: TArray<TPersistentClass>;
   protected
+    function GetChecked: Boolean; virtual;
+    procedure SetChecked(const Value: Boolean); virtual;
     function GetCaption: String; virtual;
     procedure SetCaption(const Value: String); virtual;
     function GetOnClick: TNotifyEvent; virtual;
@@ -20,6 +22,7 @@ type
     class procedure RegisterVueCheckboxStyle(FrameClass: TPersistentClass);
     class function VueCheckboxStyle(Index: Integer): TPersistentClass;
   published
+    property Checked: Boolean read GetChecked write SetChecked;
     property Caption: String read GetCaption write SetCaption;
     property OnClick: TNotifyEvent read GetOnClick write SetOnClick;
   end;
@@ -41,6 +44,15 @@ begin
   if (Index > Pred(Length(TVueCheckboxBase.VueCheckboxStyles))) or (Index < 0) then
     Index := 0;
   Result := TVueCheckboxBase.VueCheckboxStyles[Index];
+end;
+
+function TVueCheckboxBase.GetChecked: Boolean;
+begin
+  Result := False;
+end;
+
+procedure TVueCheckboxBase.SetChecked(const Value: Boolean);
+begin
 end;
 
 function TVueCheckboxBase.GetCaption: String;

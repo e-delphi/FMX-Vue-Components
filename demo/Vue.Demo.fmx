@@ -75,10 +75,11 @@ object Demo: TDemo
   end
   object VueCheckbox1: TVueCheckbox
     Position.X = 408.000000000000000000
-    Position.Y = 248.000000000000000000
-    Size.Width = 145.000000000000000000
-    Size.Height = 42.000000000000000000
+    Position.Y = 264.000000000000000000
+    Size.Width = 200.000000000000000000
+    Size.Height = 40.000000000000000000
     Size.PlatformDefault = False
+    Checked = False
     Caption = 'Checkbox'
     Style = 0
   end

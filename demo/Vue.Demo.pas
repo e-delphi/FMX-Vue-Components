@@ -13,7 +13,6 @@ uses
   FMX.Controls,
   FMX.Forms,
   FMX.Graphics,
-  FMX.Dialogs,
   Vue.Text,
   Vue.Button,
   Vue.Tooltip,
