@@ -14,7 +14,7 @@ object Demo: TDemo
     Size.Width = 350.000000000000000000
     Size.Height = 50.000000000000000000
     Size.PlatformDefault = False
-    Caption = 'Text'
+    Caption = 'Texto'
     Style = 0
   end
   object VueText4: TVueText
@@ -23,7 +23,7 @@ object Demo: TDemo
     Size.Width = 350.000000000000000000
     Size.Height = 50.000000000000000000
     Size.PlatformDefault = False
-    Caption = 'Text'
+    Caption = 'Texto'
     Style = 3
   end
   object VueText3: TVueText
@@ -32,7 +32,7 @@ object Demo: TDemo
     Size.Width = 350.000000000000000000
     Size.Height = 50.000000000000000000
     Size.PlatformDefault = False
-    Caption = 'Text'
+    Caption = 'Texto'
     Style = 2
   end
   object VueText2: TVueText
@@ -41,46 +41,46 @@ object Demo: TDemo
     Size.Width = 350.000000000000000000
     Size.Height = 50.000000000000000000
     Size.PlatformDefault = False
-    Caption = 'Text'
+    Caption = 'Texto'
     Style = 1
   end
   object VueButton1: TVueButton
     Position.X = 408.000000000000000000
-    Position.Y = 152.000000000000000000
+    Position.Y = 72.000000000000000000
     Size.Width = 89.000000000000000000
     Size.Height = 42.000000000000000000
     Size.PlatformDefault = False
-    Caption = 'Button'
+    Caption = 'Bot'#227'o'
     Style = 2
     OnClick = VueButton1Click
   end
   object VueButton2: TVueButton
-    Position.X = 408.000000000000000000
-    Position.Y = 327.000000000000000000
+    Position.X = 512.000000000000000000
+    Position.Y = 71.000000000000000000
     Size.Width = 89.000000000000000000
     Size.Height = 42.000000000000000000
     Size.PlatformDefault = False
-    Caption = 'Button'
+    Caption = 'Bot'#227'o'
     Style = 0
     OnClick = VueButton2Click
   end
   object VueTooltip1: TVueTooltip
     Position.X = 412.000000000000000000
-    Position.Y = 201.000000000000000000
+    Position.Y = 121.000000000000000000
     Size.Width = 80.000000000000000000
     Size.Height = 30.000000000000000000
     Size.PlatformDefault = False
-    Caption = 'Tooltip'
+    Caption = 'Ajuda'
     Style = 0
   end
   object VueCheckbox1: TVueCheckbox
     Position.X = 408.000000000000000000
-    Position.Y = 264.000000000000000000
+    Position.Y = 240.000000000000000000
     Size.Width = 200.000000000000000000
     Size.Height = 40.000000000000000000
     Size.PlatformDefault = False
     Checked = False
-    Caption = 'Checkbox'
+    Caption = 'Caixa de Sele'#231#227'o'
     Style = 0
   end
 end

@@ -15,6 +15,8 @@ type
   private
     FFrame: TVueCheckboxBase;
     FStyle: Integer;
+    FCaption: String;
+    FChecked: Boolean;
     function GetChecked: Boolean;
     procedure SetChecked(const Value: Boolean);
     function GetCaption: String;
@@ -27,6 +29,7 @@ type
     destructor Destroy; override;
   published
     property Align;
+    property Anchors;
     property Position;
     property Width;
     property Height;
@@ -57,22 +60,34 @@ end;
 
 function TVueCheckbox.GetChecked: Boolean;
 begin
-  Result := FFrame.Checked
+  Result := FChecked;
 end;
 
 procedure TVueCheckbox.SetChecked(const Value: Boolean);
 begin
+  FChecked := Value;
   FFrame.Checked := Value;
 end;
 
 function TVueCheckbox.GetCaption: String;
 begin
-  Result := FFrame.Caption
+  Result := FCaption;
 end;
 
 procedure TVueCheckbox.SetCaption(const Value: String);
 begin
+  FCaption := Value;
   FFrame.Caption := Value;
+end;
+
+function TVueCheckbox.GetOnClick: TNotifyEvent;
+begin
+  Result := FFrame.OnClick;
+end;
+
+procedure TVueCheckbox.SetOnClick(const Value: TNotifyEvent);
+begin
+  FFrame.OnClick := Value;
 end;
 
 procedure TVueCheckbox.SetStyle(const Value: Integer);
@@ -85,16 +100,9 @@ begin
   FFrame := TVueCheckboxBase(TVueCheckboxBase.VueCheckboxStyle(Value).Create).Create(Self);
   FFrame.Stored := False;
   Self.AddObject(FFrame);
-end;
 
-function TVueCheckbox.GetOnClick: TNotifyEvent;
-begin
-  Result := FFrame.OnClick;
-end;
-
-procedure TVueCheckbox.SetOnClick(const Value: TNotifyEvent);
-begin
-  FFrame.OnClick := Value;
+  FFrame.Checked := FChecked;
+  FFrame.Caption := FCaption;
 end;
 
 end.

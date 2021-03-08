@@ -17,6 +17,7 @@ type
   private
     FFrame: TVueButtonBase;
     FStyle: Integer;
+    FCaption: String;
     function GetCaption: String;
     procedure SetCaption(const Value: String);
     procedure SetStyle(const Value: Integer);
@@ -27,6 +28,7 @@ type
     destructor Destroy; override;
   published
     property Align;
+    property Anchors;
     property Position;
     property Width;
     property Height;
@@ -56,12 +58,23 @@ end;
 
 function TVueButton.GetCaption: String;
 begin
-  Result := FFrame.Caption
+  Result := FCaption;
 end;
 
 procedure TVueButton.SetCaption(const Value: String);
 begin
+  FCaption := Value;
   FFrame.Caption := Value;
+end;
+
+function TVueButton.GetOnClick: TNotifyEvent;
+begin
+  Result := FFrame.OnClick;
+end;
+
+procedure TVueButton.SetOnClick(const Value: TNotifyEvent);
+begin
+  FFrame.OnClick := Value;
 end;
 
 procedure TVueButton.SetStyle(const Value: Integer);
@@ -74,16 +87,8 @@ begin
   FFrame := TVueButtonBase(TVueButtonBase.VueButtonStyle(Value).Create).Create(Self);
   FFrame.Stored := False;
   Self.AddObject(FFrame);
-end;
 
-function TVueButton.GetOnClick: TNotifyEvent;
-begin
-  Result := FFrame.OnClick;
-end;
-
-procedure TVueButton.SetOnClick(const Value: TNotifyEvent);
-begin
-  FFrame.OnClick := Value;
+  FFrame.Caption := FCaption;
 end;
 
 end.

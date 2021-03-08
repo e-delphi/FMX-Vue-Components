@@ -31,6 +31,8 @@ type
   protected
     function GetCaption: String; override;
     procedure SetCaption(const Value: String); override;
+    function GetText: String; override;
+    procedure SetText(const Value: String); override;
   end;
 
 implementation
@@ -60,6 +62,17 @@ procedure TVueTextStyle3.SetCaption(const Value: String);
 begin
   lbCaption.Text := Value;
 end;
+
+function TVueTextStyle3.GetText: String;
+begin
+  Result := edtText.Text;
+end;
+
+procedure TVueTextStyle3.SetText(const Value: String);
+begin
+  edtText.Text := Value;
+end;
+
 
 initialization
   TVueTextBase.RegisterVueTextStyle(TVueTextStyle3);

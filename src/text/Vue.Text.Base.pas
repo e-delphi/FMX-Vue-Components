@@ -14,11 +14,14 @@ type
   protected
     function GetCaption: String; virtual;
     procedure SetCaption(const Value: String); virtual;
+    function GetText: String; virtual;
+    procedure SetText(const Value: String); virtual;
   public
     class procedure RegisterVueTextStyle(FrameClass: TPersistentClass);
     class function VueTextStyle(Index: Integer): TPersistentClass;
   published
     property Caption: String read GetCaption write SetCaption;
+    property Text: String read GetText write SetText;
   end;
 
 implementation
@@ -45,6 +48,14 @@ begin
 end;
 
 procedure TVueTextBase.SetCaption(const Value: String);
+begin
+end;
+
+function TVueTextBase.GetText: String;
+begin
+end;
+
+procedure TVueTextBase.SetText(const Value: String);
 begin
 end;
 

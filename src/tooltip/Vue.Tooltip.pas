@@ -15,6 +15,7 @@ type
   private
     FFrame: TVueTooltipBase;
     FStyle: Integer;
+    FCaption: String;
     function GetCaption: String;
     procedure SetCaption(const Value: String);
     procedure SetStyle(const Value: Integer);
@@ -25,6 +26,7 @@ type
     procedure Hide; override;
   published
     property Align;
+    property Anchors;
     property Position;
     property Width;
     property Height;
@@ -53,11 +55,12 @@ end;
 
 function TVueTooltip.GetCaption: String;
 begin
-  Result := FFrame.Caption
+  Result := FCaption;
 end;
 
 procedure TVueTooltip.SetCaption(const Value: String);
 begin
+  FCaption := Value;
   FFrame.Caption := Value;
 end;
 
@@ -81,6 +84,8 @@ begin
   FFrame := TVueTooltipBase(TVueTooltipBase.VueTooltipStyle(Value).Create).Create(Self);
   FFrame.Stored := False;
   Self.AddObject(FFrame);
+
+  FFrame.Caption := FCaption;
 end;
 
 end.
