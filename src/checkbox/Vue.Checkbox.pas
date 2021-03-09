@@ -6,6 +6,8 @@ interface
 uses
   FMX.Controls,
   System.Classes,
+  System.UITypes,
+  Vue.Utils,
   Vue.Checkbox.Base,
   // Styles
   Vue.Checkbox.Style0;
@@ -17,6 +19,7 @@ type
     FStyle: Integer;
     FCaption: String;
     FChecked: Boolean;
+    FFocusColor: TAlphaColor;
     function GetChecked: Boolean;
     procedure SetChecked(const Value: Boolean);
     function GetCaption: String;
@@ -24,6 +27,7 @@ type
     procedure SetStyle(const Value: Integer);
     procedure SetOnClick(const Value: TNotifyEvent);
     function GetOnClick: TNotifyEvent;
+    procedure SetFocusColor(const Value: TAlphaColor);
   public
     constructor Create(AOwner: TComponent); override;
     destructor Destroy; override;
@@ -36,6 +40,7 @@ type
     property Size;
     property Checked: Boolean read GetChecked write SetChecked;
     property Caption: String read GetCaption write SetCaption;
+    property FocusColor: TAlphaColor read FFocusColor write SetFocusColor;
     property Style: Integer read FStyle write SetStyle;
     property OnClick: TNotifyEvent read GetOnClick write SetOnClick;
   end;
@@ -50,6 +55,7 @@ begin
   Style  := 0;
   Width  := 200;
   Height := 40;
+  FocusColor := RGB(34, 106, 191);
 end;
 
 destructor TVueCheckbox.Destroy;
@@ -80,6 +86,12 @@ begin
   FFrame.Caption := Value;
 end;
 
+procedure TVueCheckbox.SetFocusColor(const Value: TAlphaColor);
+begin
+  FFocusColor := Value;
+  FFrame.FocusColor := Value;
+end;
+
 function TVueCheckbox.GetOnClick: TNotifyEvent;
 begin
   Result := FFrame.OnClick;
@@ -103,6 +115,7 @@ begin
 
   FFrame.Checked := FChecked;
   FFrame.Caption := FCaption;
+  FFrame.FocusColor := FFocusColor;
 end;
 
 end.

@@ -5,6 +5,7 @@ interface
 
 uses
   System.Classes,
+  System.UITypes,
   FMX.Forms;
 
 type
@@ -14,6 +15,8 @@ type
   protected
     function GetCaption: String; virtual;
     procedure SetCaption(const Value: String); virtual;
+    function GetFocusColor: TAlphaColor; virtual;
+    procedure SetFocusColor(const Value: TAlphaColor); virtual;
     function GetOnClick: TNotifyEvent; virtual;
     procedure SetOnClick(const Value: TNotifyEvent); virtual;
   public
@@ -21,6 +24,7 @@ type
     class function VueButtonStyle(Index: Integer): TPersistentClass;
   published
     property Caption: String read GetCaption write SetCaption;
+    property FocusColor: TAlphaColor read GetFocusColor write SetFocusColor;
     property OnClick: TNotifyEvent read GetOnClick write SetOnClick;
   end;
 
@@ -48,6 +52,15 @@ begin
 end;
 
 procedure TVueButtonBase.SetCaption(const Value: String);
+begin
+end;
+
+function TVueButtonBase.GetFocusColor: TAlphaColor;
+begin
+  Result := 0;
+end;
+
+procedure TVueButtonBase.SetFocusColor(const Value: TAlphaColor);
 begin
 end;
 

@@ -34,40 +34,6 @@ inherited VueButtonStyle1: TVueButtonStyle1
         Opacity = 0.500000000000000000
         ShadowColor = claBlack
       end
-      object crlEffect: TCircle
-        Fill.Color = xFFC8C8C8
-        Size.Width = 1.000000000000000000
-        Size.Height = 1.000000000000000000
-        Size.PlatformDefault = False
-        Stroke.Kind = None
-        OnMouseDown = rtgClientClientMouseDown
-        object crlOpacityAni: TFloatAnimation
-          AnimationType = InOut
-          Duration = 0.300000011920929000
-          Interpolation = Cubic
-          PropertyName = 'Opacity'
-          StartValue = 0.000000000000000000
-          StopValue = 1.000000000000000000
-        end
-        object crlEffectAni: TFloatAnimation
-          Duration = 0.300000011920929000
-          Interpolation = Cubic
-          OnProcess = crlEffectAniProcess
-          PropertyName = 'Size.Height'
-          StartValue = 0.000000000000000000
-          StopValue = 0.000000000000000000
-        end
-        object crlOpacityRAni: TFloatAnimation
-          AnimationType = InOut
-          Delay = 0.300000011920929000
-          Duration = 0.200000002980232200
-          Interpolation = Cubic
-          OnFinish = crlOpacityRAniFinish
-          PropertyName = 'Opacity'
-          StartValue = 1.000000000000000000
-          StopValue = 0.000000000000000000
-        end
-      end
     end
   end
 end

@@ -15,6 +15,7 @@ object Demo: TDemo
     Size.Height = 50.000000000000000000
     Size.PlatformDefault = False
     Caption = 'Texto'
+    FocusColor = xFF226ABF
     Style = 0
   end
   object VueText4: TVueText
@@ -24,6 +25,7 @@ object Demo: TDemo
     Size.Height = 50.000000000000000000
     Size.PlatformDefault = False
     Caption = 'Texto'
+    FocusColor = xFF226ABF
     Style = 3
   end
   object VueText3: TVueText
@@ -33,6 +35,7 @@ object Demo: TDemo
     Size.Height = 50.000000000000000000
     Size.PlatformDefault = False
     Caption = 'Texto'
+    FocusColor = xFF226ABF
     Style = 2
   end
   object VueText2: TVueText
@@ -42,6 +45,7 @@ object Demo: TDemo
     Size.Height = 50.000000000000000000
     Size.PlatformDefault = False
     Caption = 'Texto'
+    FocusColor = xFF226ABF
     Style = 1
   end
   object VueButton1: TVueButton
@@ -52,6 +56,7 @@ object Demo: TDemo
     Size.PlatformDefault = False
     Caption = 'Bot'#227'o'
     Style = 2
+    FocusColor = xFF226ABF
     OnClick = VueButton1Click
   end
   object VueButton2: TVueButton
@@ -62,6 +67,7 @@ object Demo: TDemo
     Size.PlatformDefault = False
     Caption = 'Bot'#227'o'
     Style = 0
+    FocusColor = xFF226ABF
     OnClick = VueButton2Click
   end
   object VueTooltip1: TVueTooltip
@@ -81,6 +87,7 @@ object Demo: TDemo
     Size.PlatformDefault = False
     Checked = False
     Caption = 'Caixa de Sele'#231#227'o'
+    FocusColor = xFF226ABF
     Style = 0
   end
 end

@@ -34,6 +34,7 @@ type
     procedure CheckMouseLeave(Sender: TObject);
   private
     FChecked: Boolean;
+    FFocusColor: TAlphaColor;
     FOnClick: TNotifyEvent;
     procedure UpdateState;
   protected
@@ -41,6 +42,8 @@ type
     procedure SetChecked(const Value: Boolean); override;
     function GetCaption: String; override;
     procedure SetCaption(const Value: String); override;
+    function GetFocusColor: TAlphaColor; override;
+    procedure SetFocusColor(const Value: TAlphaColor); override;
     function GetOnClick: TNotifyEvent; override;
     procedure SetOnClick(const Value: TNotifyEvent); override;
   public
@@ -83,6 +86,16 @@ begin
   lbCaption.Text := Value;
 end;
 
+function TVueCheckboxStyle0.GetFocusColor: TAlphaColor;
+begin
+  Result := FFocusColor;
+end;
+
+procedure TVueCheckboxStyle0.SetFocusColor(const Value: TAlphaColor);
+begin
+  FFocusColor := Value;
+end;
+
 function TVueCheckboxStyle0.GetOnClick: TNotifyEvent;
 begin
   Result := FOnClick;
@@ -107,9 +120,9 @@ procedure TVueCheckboxStyle0.UpdateState;
 begin
   if FChecked then
   begin
-    crlCheck.Fill.Color := RGB(34, 106, 191);
-    rtgCheck.Fill.Color := RGB(34, 106, 191);
-    rtgCheck.Stroke.Color := RGB(34, 106, 191);
+    crlCheck.Fill.Color := FFocusColor;
+    rtgCheck.Fill.Color := FFocusColor;
+    rtgCheck.Stroke.Color := FFocusColor;
     pthCheck.Stroke.Color := RGB(255, 255, 255);
   end
   else

@@ -41,6 +41,8 @@ type
     procedure SetCaption(const Value: String); override;
     function GetText: String; override;
     procedure SetText(const Value: String); override;
+    function GetFocusColor: TAlphaColor; override;
+    procedure SetFocusColor(const Value: TAlphaColor); override;
   end;
 
 implementation
@@ -128,6 +130,17 @@ end;
 procedure TVueTextStyle2.SetText(const Value: String);
 begin
   edtText.Text := Value;
+end;
+
+function TVueTextStyle2.GetFocusColor: TAlphaColor;
+begin
+  Result := lbColorAni.StopValue;
+end;
+
+procedure TVueTextStyle2.SetFocusColor(const Value: TAlphaColor);
+begin
+  lbColorAni.StopValue := Value;
+  lneStrokeColorAni.StopValue := Value;
 end;
 
 initialization

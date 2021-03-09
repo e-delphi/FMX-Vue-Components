@@ -27,6 +27,24 @@ inherited VueTextStyle1: TVueTextStyle1
         StartValue = xFF7F7F7F
         StopValue = xFF226ABF
       end
+      object lneEffect: TLine
+        ClipParent = True
+        LineType = Top
+        Position.X = 6.000000000000000000
+        Size.Width = 1.000000000000000000
+        Size.Height = 3.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Color = claNull
+        Stroke.Thickness = 5.000000000000000000
+        object lneWidthAni: TFloatAnimation
+          AnimationType = InOut
+          Duration = 0.200000002980232200
+          Interpolation = Cubic
+          PropertyName = 'Width'
+          StartValue = 0.000000000000000000
+          StopValue = 93.000000000000000000
+        end
+      end
     end
     object edtText: TEdit
       Touch.InteractiveGestures = [LongTap, DoubleTap]
@@ -47,24 +65,6 @@ inherited VueTextStyle1: TVueTextStyle1
       OnExit = edtTextExit
       OnMouseEnter = rtgClientMouseEnter
       OnMouseLeave = rtgClientMouseLeave
-    end
-    object lneEffect: TLine
-      LineType = Top
-      Position.X = 6.000000000000000000
-      Position.Y = 9.000000000000000000
-      Size.Width = 1.000000000000000000
-      Size.Height = 3.000000000000000000
-      Size.PlatformDefault = False
-      Stroke.Color = xFFFAFAFA
-      Stroke.Thickness = 5.000000000000000000
-      object lneWidthAni: TFloatAnimation
-        AnimationType = InOut
-        Duration = 0.200000002980232200
-        Interpolation = Cubic
-        PropertyName = 'Width'
-        StartValue = 0.000000000000000000
-        StopValue = 93.000000000000000000
-      end
     end
     object lbCaption: TLabel
       AutoSize = True

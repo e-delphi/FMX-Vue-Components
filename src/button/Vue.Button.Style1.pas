@@ -29,17 +29,9 @@ type
     rtgClient: TCircle;
     rtgClientClient: TCircle;
     rtgShadow: TShadowEffect;
-    crlEffect: TCircle;
-    crlOpacityAni: TFloatAnimation;
-    crlEffectAni: TFloatAnimation;
-    crlOpacityRAni: TFloatAnimation;
     procedure rtgClientClientMouseDown(Sender: TObject;  Button: TMouseButton; Shift: TShiftState; X, Y: Single);
-    procedure crlEffectAniProcess(Sender: TObject);
-    procedure crlOpacityRAniFinish(Sender: TObject);
   private
     FOnClick: TNotifyEvent;
-    FX: Single;
-    FY: Single;
   protected
     function GetCaption: String; override;
     procedure SetCaption(const Value: String); override;
@@ -74,35 +66,8 @@ begin
   FOnClick := Value;
 end;
 
-procedure TVueButtonStyle1.crlOpacityRAniFinish(Sender: TObject);
-begin
-  crlEffect.Visible := False;
-end;
-
-procedure TVueButtonStyle1.crlEffectAniProcess(Sender: TObject);
-begin
-  crlEffect.Width := crlEffect.Height;
-  crlEffect.Position.X := FX - (crlEffect.Width / 2);
-  crlEffect.Position.Y := FY - (crlEffect.Height / 2);
-end;
-
 procedure TVueButtonStyle1.rtgClientClientMouseDown(Sender: TObject; Button: TMouseButton; Shift: TShiftState; X, Y: Single);
 begin
-  FX := X;
-  FY := Y;
-
-  crlEffect.Position.X := X - (crlEffect.Width / 2);
-  crlEffect.Position.Y := Y - (crlEffect.Height / 2);
-
-  crlEffect.Width := 0;
-  crlEffect.Height := 0;
-  crlEffect.Visible := True;
-  crlEffectAni.StopValue := Max(rtgClientClient.Width, rtgClientClient.Height) * 2;
-
-  crlEffectAni.Start;
-  crlOpacityAni.Start;
-  crlOpacityRAni.Start;
-
   if Assigned(FOnClick) then
     FOnClick(Sender);
 end;

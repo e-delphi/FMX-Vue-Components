@@ -5,6 +5,7 @@ interface
 
 uses
   System.Classes,
+  System.UITypes,
   FMX.Forms;
 
 type
@@ -16,12 +17,15 @@ type
     procedure SetCaption(const Value: String); virtual;
     function GetText: String; virtual;
     procedure SetText(const Value: String); virtual;
+    function GetFocusColor: TAlphaColor; virtual;
+    procedure SetFocusColor(const Value: TAlphaColor); virtual;
   public
     class procedure RegisterVueTextStyle(FrameClass: TPersistentClass);
     class function VueTextStyle(Index: Integer): TPersistentClass;
   published
     property Caption: String read GetCaption write SetCaption;
     property Text: String read GetText write SetText;
+    property FocusColor: TAlphaColor read GetFocusColor write SetFocusColor;
   end;
 
 implementation
@@ -48,6 +52,15 @@ begin
 end;
 
 procedure TVueTextBase.SetCaption(const Value: String);
+begin
+end;
+
+function TVueTextBase.GetFocusColor: TAlphaColor;
+begin
+  Result := 0;
+end;
+
+procedure TVueTextBase.SetFocusColor(const Value: TAlphaColor);
 begin
 end;
 

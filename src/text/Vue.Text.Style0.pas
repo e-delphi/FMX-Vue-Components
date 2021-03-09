@@ -40,6 +40,8 @@ type
     procedure SetCaption(const Value: String); override;
     function GetText: String; override;
     procedure SetText(const Value: String); override;
+    function GetFocusColor: TAlphaColor; override;
+    procedure SetFocusColor(const Value: TAlphaColor); override;
   end;
 
 implementation
@@ -66,7 +68,6 @@ begin
   lbPosYAni.Inverse := False;
   lbPosYAni.Start;
 
-  lneEffect.Stroke.Color := RGB(235, 235, 235);
   lneWidthAni.StopValue := lbCaption.Width + 10;
   lneWidthAni.Inverse := False;
   lneWidthAni.Start;
@@ -140,6 +141,17 @@ end;
 procedure TVueTextStyle0.SetText(const Value: String);
 begin
   edtText.Text := Value;
+end;
+
+function TVueTextStyle0.GetFocusColor: TAlphaColor;
+begin
+  Result := lbColorAni.StopValue;
+end;
+
+procedure TVueTextStyle0.SetFocusColor(const Value: TAlphaColor);
+begin
+  lbColorAni.StopValue := Value;
+  rtgStrokeColorAni.StopValue := Value;
 end;
 
 initialization
