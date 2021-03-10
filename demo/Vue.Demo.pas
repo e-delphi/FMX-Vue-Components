@@ -16,7 +16,8 @@ uses
   Vue.Text,
   Vue.Button,
   Vue.Tooltip,
-  Vue.Checkbox;
+  Vue.Checkbox,
+  Vue.Switch;
 
 type
   TDemo = class(TForm)
@@ -28,6 +29,7 @@ type
     VueButton2: TVueButton;
     VueTooltip1: TVueTooltip;
     VueCheckbox1: TVueCheckbox;
+    VueSwitch1: TVueSwitch;
     procedure VueButton1Click(Sender: TObject);
     procedure VueButton2Click(Sender: TObject);
   private

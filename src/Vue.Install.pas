@@ -14,11 +14,12 @@ uses
   Vue.Text,
   Vue.Button,
   Vue.Tooltip,
-  Vue.Checkbox;
+  Vue.Checkbox,
+  Vue.Switch;
 
 procedure Register;
 begin
-  RegisterComponents('Vue', [TVueText, TVueButton, TVueTooltip, TVueCheckbox]);
+  RegisterComponents('Vue', [TVueText, TVueButton, TVueTooltip, TVueCheckbox, TVueSwitch]);
 end;
 
 end.

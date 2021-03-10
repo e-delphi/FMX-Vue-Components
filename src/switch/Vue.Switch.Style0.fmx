@@ -1,0 +1,96 @@
+inherited VueSwitchStyle0: TVueSwitchStyle0
+  Align = Client
+  Size.Height = 42.000000000000000000
+  object lytClient: TLayout
+    Align = Client
+    Size.Width = 200.000000000000000000
+    Size.Height = 42.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    object lbCaption: TLabel
+      Align = VertCenter
+      StyledSettings = [Style]
+      Position.X = 61.000000000000000000
+      Position.Y = 7.000000000000000000
+      Scale.X = 1.299999952316284000
+      Scale.Y = 1.299999952316284000
+      Size.Width = 106.923080444335900000
+      Size.Height = 21.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Family = 'Roboto'
+      TextSettings.FontColor = xFF7F7F7F
+      TextSettings.WordWrap = False
+      Text = 'Switch'
+      TabOrder = 0
+      OnMouseDown = CheckMouseDown
+    end
+    object lytCheck: TLayout
+      Align = Left
+      Size.Width = 61.000000000000000000
+      Size.Height = 42.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      OnMouseDown = CheckMouseDown
+      OnMouseEnter = CheckMouseEnter
+      OnMouseLeave = CheckMouseLeave
+      object rrtScroll: TRoundRect
+        Fill.Color = claBlack
+        Opacity = 0.300000011920929000
+        Position.X = 11.000000000000000000
+        Position.Y = 13.000000000000000000
+        Size.Width = 37.000000000000000000
+        Size.Height = 15.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Kind = None
+      end
+      object crlShadow: TCircle
+        Fill.Color = claBlack
+        Opacity = 0.200000002980232200
+        Position.X = -3.000000000000000000
+        Position.Y = -1.000000000000000000
+        Size.Width = 46.000000000000000000
+        Size.Height = 41.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Kind = None
+        OnMouseDown = CheckMouseDown
+        OnMouseEnter = CheckMouseEnter
+        OnMouseLeave = CheckMouseLeave
+        object crlShadowPositionXAni: TFloatAnimation
+          AnimationType = InOut
+          Duration = 0.200000002980232200
+          Interpolation = Cubic
+          PropertyName = 'Position.X'
+          StartValue = -3.000000000000000000
+          StopValue = 16.000000000000000000
+        end
+      end
+      object crlValue: TCircle
+        Fill.Color = claWhite
+        Position.X = 10.000000000000000000
+        Position.Y = 9.000000000000000000
+        Size.Width = 21.000000000000000000
+        Size.Height = 21.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Kind = None
+        OnMouseDown = CheckMouseDown
+        OnMouseEnter = CheckMouseEnter
+        OnMouseLeave = CheckMouseLeave
+        object ShadowEffect1: TShadowEffect
+          Distance = 1.500000000000000000
+          Direction = 90.000000000000000000
+          Softness = 0.100000001490116100
+          Opacity = 0.500000000000000000
+          ShadowColor = claBlack
+        end
+        object crlValuePositionXAni: TFloatAnimation
+          AnimationType = InOut
+          Duration = 0.200000002980232200
+          Interpolation = Cubic
+          PropertyName = 'Position.X'
+          StartValue = 10.000000000000000000
+          StopValue = 28.000000000000000000
+        end
+      end
+    end
+  end
+end

@@ -90,4 +90,15 @@ object Demo: TDemo
     FocusColor = xFF226ABF
     Style = 0
   end
+  object VueSwitch1: TVueSwitch
+    Position.X = 416.000000000000000000
+    Position.Y = 328.000000000000000000
+    Size.Width = 200.000000000000000000
+    Size.Height = 40.000000000000000000
+    Size.PlatformDefault = False
+    Value = False
+    Caption = 'Interruptor'
+    FocusColor = xFF226ABF
+    Style = 0
+  end
 end

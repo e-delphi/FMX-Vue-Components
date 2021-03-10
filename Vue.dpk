@@ -51,6 +51,9 @@ contains
   Vue.Tooltip.Style0 in 'src\tooltip\Vue.Tooltip.Style0.pas' {VueTooltipStyle0: TFrame},
   Vue.Checkbox.Base in 'src\checkbox\Vue.Checkbox.Base.pas' {VueCheckboxBase: TFrame},
   Vue.Checkbox in 'src\checkbox\Vue.Checkbox.pas',
-  Vue.CheckBox.Style0 in 'src\checkbox\Vue.CheckBox.Style0.pas' {VueCheckboxStyle0: TFrame};
+  Vue.CheckBox.Style0 in 'src\checkbox\Vue.CheckBox.Style0.pas' {VueCheckboxStyle0: TFrame},
+  Vue.Switch.Base in 'src\switch\Vue.Switch.Base.pas' {VueSwitchBase: TFrame},
+  Vue.Switch in 'src\switch\Vue.Switch.pas',
+  Vue.Switch.Style0 in 'src\switch\Vue.Switch.Style0.pas' {VueSwitchStyle0: TFrame};
 
 end.
