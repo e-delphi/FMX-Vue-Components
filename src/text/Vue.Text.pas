@@ -35,6 +35,7 @@ type
     destructor Destroy; override;
   published
     property Align;
+    property Margins;
     property Anchors;
     property Position;
     property Width;
